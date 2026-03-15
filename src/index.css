@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brandPink: #E8B4B8;
+  --color-brandGold: #C6A96B;
+  --color-brandCharcoal: #2B2B2B;
+  --color-brandBeige: #F9F5F2;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .heading-serif {
+    font-family: var(--font-serif);
+  }
+  .text-body {
+    font-family: var(--font-sans);
+  }
+  .italic-serif {
+    font-style: italic;
+  }
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    transition: transform 0.2s;
+  }
+  .floating-whatsapp:hover {
+    transform: scale(1.1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
